@@ -1,0 +1,19 @@
+*{
+    margin : 0 ;
+    padding : 0 ;
+}
+
+body{
+    background : rgb(30, 139, 206) ;
+    display : flex ;
+    justify-content: center ;
+    align-items: center ;
+    height : 100vh ;
+}
+
+ .big-container{
+    height : 600px;
+    width : 600px ;
+    padding : 10px ;
+    background: bisque;
+ }
