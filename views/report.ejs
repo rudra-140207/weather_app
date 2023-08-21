@@ -7,9 +7,45 @@
     <link rel="stylesheet" href="report.css">
 </head>
 <body>
-        <div class="big-container">
-            This is to show the wetaher report of the given location.
+    <form class="form" method="post" action="/report">
+        <input type="text" class="location_input" name="location" required>
+        <button type="submit" class="location-btn">Get</button>
+    </form>
+    <div class="big-container">
+        <div class="container-1">
+            <p> <%= locals.Name %> ,<%= locals.State %> ,<%= locals.Country %> </p>    
         </div>
+        <img src="icons/weather-app.png" class="initial-img" >
+            <p class="temperature"><%= locals.Temp_C %> <sup>o</sup>C</p>
+        <div class="container-2">
+            <p> Wind Speed <img src="icons/wind.png" > <%= locals.Wind_kph  %> Kmph </p>
+            <p> Precipitation <img src="icons/storm.png" > <%= locals.precip_mm %> </p>
+            <p> Humidity <img src="icons/hot.png" > <%= locals.humidity %> </p>
+            <p> Cloud cover  <img src="icons/cloudy.png" > <%= locals.cloud %> </p>
+        </div>
+        <div class="container-3">
+            <p> Feels like <%= locals.feelslike_c %> 
+             pm 2.5 <img src="icons/air-pollution.png" > <%= locals.pm_2_5 %> </p>
+        </div>
+            
+    </div>
     
 </body>
 </html>
+<!-- This is to show the wetaher report of the given location.
+            <br>
+            <%= locals.State %>
+            <%= locals.Country %>
+            <%= locals.Time_Zone %> ,
+            <%= locals.Temp_C %>
+            <%= locals.Temp_F %>
+            <%= locals.dayOrNight %>
+            <%= locals.Wind_mph %>
+            <%= locals.Wind_kph  %>
+            <%= locals.wind_degree %>
+            <%= locals.precip_mm %>
+            <%= locals.humidity %>
+            <%= locals.cloud %>
+            <%= locals.feelslike_c %>
+            <%= locals.feelslike_f %>
+            <%= locals.pm_2_5 %> -->

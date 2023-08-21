@@ -1,19 +1,94 @@
-*{
-    margin : 0 ;
-    padding : 0 ;
+body {
+    background : url("icons/mountains-5536397_1920.jpg") center ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-body{
-    background : rgb(30, 139, 206) ;
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.location_input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.location-btn {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.location-btn:hover {
+    background-color: #27ae60;
+}
+
+.big-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    opacity : 0.7 ;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+}
+
+.container-1,
+.container-2,
+.container-3 {
+    margin: 15px 0;
+    text-align: center;
     display : flex ;
-    justify-content: center ;
-    align-items: center ;
-    height : 100vh ;
+    justify-content: space-between;
+    
 }
 
- .big-container{
-    height : 600px;
-    width : 600px ;
-    padding : 10px ;
-    background: bisque;
- }
+.temperature {
+    font-size: 50px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.container-1 p,
+.container-2 p,
+.container-3 p {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+
+.superscript {
+    font-size: 0.6em;
+    vertical-align: super;
+}
+
+.initial-img {
+    width: 100px;
+    height: auto;
+}
+
+.container-2 img,
+.container-3 img {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+}
