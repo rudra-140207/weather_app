@@ -38,24 +38,19 @@ app.post("/report", async (req, res) => {
         }
         
         var data = await response.json();
-        
+        // console.log(data);
 
         res.render("report",{
             Name : data.location.name ,
             State: data.location.region,
             Country: data.location.country,
-            Time_Zone: data.location.tz_id,
             Temp_C: data.current.temp_c,
-            Temp_F: data.temp_f,
             dayOrNight: data.current.is_day,
-            Wind_mph: data.current.wind_mph,
             Wind_kph: data.current.wind_kph,
-            wind_degree: data.current.wind_degree,
+            wind_dir: data.current.wind_dir,
             precip_mm: data.current.precip_mm,
             humidity: data.current.humidity,
             cloud: data.current.cloud,
-            feelslike_c: data.current.feelslike_c,
-            feelslike_f: data.current.feelslike_f ,
             pm_2_5 : data.current.air_quality.pm2_5 
         });
     }

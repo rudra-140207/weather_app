@@ -1,51 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
     <link rel="stylesheet" href="report.css">
 </head>
+
 <body>
     <form class="form" method="post" action="/report">
-        <input type="text" class="location_input" name="location" required>
+        <input type="text" class="location_input" name="location" 
+        placeholder="Enter location" value="<%= locals.Name %>" required >
         <button type="submit" class="location-btn">Get</button>
     </form>
+
     <div class="big-container">
         <div class="container-1">
-            <p> <%= locals.Name %> ,<%= locals.State %> ,<%= locals.Country %> </p>    
+            <p>
+                <%= locals.Name %> ,<%= locals.State %> ,<%= locals.Country %>
+            </p>
         </div>
-        <img src="icons/weather-app.png" class="initial-img" >
-            <p class="temperature"><%= locals.Temp_C %> <sup>o</sup>C</p>
+
+        <img src="icons/weather-app.png" class="initial-img">
+        <p class="temperature">
+            <%= locals.Temp_C %> <sup>o</sup>C
+        </p>
+
         <div class="container-2">
-            <p> Wind Speed <img src="icons/wind.png" > <%= locals.Wind_kph  %> Kmph </p>
-            <p> Precipitation <img src="icons/storm.png" > <%= locals.precip_mm %> </p>
-            <p> Humidity <img src="icons/hot.png" > <%= locals.humidity %> </p>
-            <p> Cloud cover  <img src="icons/cloudy.png" > <%= locals.cloud %> </p>
+            <p> Wind Speed <br> <img src="icons/wind.png">
+                <b>
+                    <%= locals.wind_dir %>
+                        <%= locals.Wind_kph %> Kmph
+                </b>
+            </p>
+
+            <p> Precipitation (mm) <br> <img src="icons/storm.png">
+                <b>
+                    <%= locals.precip_mm %> mm
+                </b>
+            </p>
+
+            <p> Humidity <br> <img src="icons/hot.png">
+                <b>
+                    <%= locals.humidity %>%
+                </b>
+            </p>
+
         </div>
+
         <div class="container-3">
-            <p> Feels like <%= locals.feelslike_c %> 
-             pm 2.5 <img src="icons/air-pollution.png" > <%= locals.pm_2_5 %> </p>
+            <p> Cloud cover <br> <img src="icons/cloudy.png">
+                <b>
+                    <%= locals.cloud %>%
+                </b>
+            </p>
+
+            <p> pm 2.5 <br> <img src="icons/air-pollution.png"> <br>
+                <b>
+                    <%= locals.pm_2_5 %>
+                </b>
+            </p>
+
         </div>
-            
+
     </div>
-    
+
 </body>
+
 </html>
-<!-- This is to show the wetaher report of the given location.
-            <br>
-            <%= locals.State %>
-            <%= locals.Country %>
-            <%= locals.Time_Zone %> ,
-            <%= locals.Temp_C %>
-            <%= locals.Temp_F %>
-            <%= locals.dayOrNight %>
-            <%= locals.Wind_mph %>
-            <%= locals.Wind_kph  %>
-            <%= locals.wind_degree %>
-            <%= locals.precip_mm %>
-            <%= locals.humidity %>
-            <%= locals.cloud %>
-            <%= locals.feelslike_c %>
-            <%= locals.feelslike_f %>
-            <%= locals.pm_2_5 %> -->
