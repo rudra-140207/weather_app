@@ -9,16 +9,23 @@
 </head>
 
 <body>
+    <header>
+        <a href="/">Home</a>
+    </header>
+    <br>
+    <br>
     <form class="form" method="post" action="/report">
-        <input type="text" class="location_input" name="location" 
-        placeholder="Enter location" value="<%= locals.Name %>" required >
+        <input type="text" class="location_input" name="location" placeholder="Enter location"
+            value="<%= locals.Name %>" required>
         <button type="submit" class="location-btn">Get</button>
     </form>
 
     <div class="big-container">
         <div class="container-1">
             <p>
-                <%= locals.Name %> ,<%= locals.State %> ,<%= locals.Country %>
+                <b>
+                    <%= locals.Name %> ,<%= locals.State %> ,<%= locals.Country %>
+                </b>
             </p>
         </div>
 
@@ -35,7 +42,7 @@
                 </b>
             </p>
 
-            <p> Precipitation (mm) <br> <img src="icons/storm.png">
+            <p> Precipitation (mm) <br> <img src="icons/raining.png">
                 <b>
                     <%= locals.precip_mm %> mm
                 </b>
@@ -65,6 +72,15 @@
         </div>
 
     </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+          <p class="footer-desc">Crafted with Care and Passion 
+          <br>
+          Email : rowdyrudra07online@gmail.com
+          </p>
+        </div>
+      </footer>
 
 </body>
 

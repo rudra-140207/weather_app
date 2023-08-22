@@ -9,11 +9,31 @@
 </head>
 
 <body>
-    Hello , This is home page.
+    <video class="background-video" autoplay loop muted >
+        <source src="media/pexels-marc-onana-5521548 (1080p).mp4" type="video/mp4">
+    </video>
+    <header>
+        <a href="/">Home</a>
+    </header>
+
+    <p class="headlines">Adventure awaits!<br>Plan your activities with confidence using our accurate weather data</p>
+    <p class="title">True Weather</p>
+    <p class="sub-lines">Unveiling the Secrets of the Skies</p>
+
     <form method="post" action="/report">
-        <input type="text" class="location_input" name="location" required>
+        <input type="text" class="location-input" name="location" placeholder="Enter the location" required>
         <button type="submit" class="location-btn">Get</button>
     </form>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+          <p class="footer-desc">Crafted with Care and Passion 
+          <br>
+          Email : rowdyrudra07online@gmail.com
+          </p>
+        </div>
+      </footer>
+
 </body>
 <script src="index.js"></script>
 

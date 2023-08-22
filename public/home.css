@@ -1,6 +1,89 @@
-*{
+body{
     margin : 0;
     padding : 0;
     background-color: aquamarine;
+    display : flex ;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center ;
+    height : 100vh ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
- 
+
+.background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+  }
+
+header{
+    position: absolute;
+    top : 10px ;
+    left : 20px ;
+}
+
+a{
+    text-decoration: none;
+    color : blue ;
+    font-size : 30px ;
+}
+
+.headlines{
+    margin-bottom : 5px ;
+    font-size : 20px ;
+}
+
+.title{
+    
+    font-size: 80px ;
+    margin-bottom: 5px ;
+    margin-top : 5px ;
+}
+
+.sub-lines{
+    margin-top : 5px ;
+    font-size : 20px ;
+}
+
+form{
+    display : flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+.location-input{
+    border : none ;
+    border-radius : 10px ;
+    padding : 15px ;
+    width : 300px ;
+    font-size : 20px ;
+}
+
+.location-btn{
+    border : none ;
+    border-radius : 10px ;
+    padding : 15px ;
+    margin : 10px ;
+    background-color : rgb(113, 113, 216) ; 
+    font-size : 20px ;
+}
+
+.site-footer {
+    background-color: #fafafd01;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+  
+.footer-content {
+    width: 25%;
+    margin:auto;
+    font-size : 15px ;
+}
