@@ -122,9 +122,6 @@ b{
 .site-footer {
     background-color: #fafafd01;
     color: #fff;
-    padding: 10px 0;
-    position: fixed;
-    bottom: -16px;
     width: 100%;
    
 }
@@ -138,7 +135,7 @@ b{
     align-items: center;
 }
 
-@media (max-width : 580px){
+@media (max-width : 600px){
     body{
         background-size: auto ;
     }
@@ -159,16 +156,7 @@ b{
     .footer-content{
         width: 100%;
         font-size: 12px;
-        /* margin-left: 20%; */
     }
 }
 
-@media (max-width : 1000px){
-
-    .footer-content{
-        width: 100%;
-        font-size: 12px;
-        /* margin-left: 30%; */
-    }
-}
 
