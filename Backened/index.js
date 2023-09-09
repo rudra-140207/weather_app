@@ -1,14 +1,15 @@
 import express from "express";
 import path from "path";
 import dotenv from "dotenv";
-dotenv.config();
+dotenv.config({path:"../.env"});
 
 const app = express();
 
 app.set("view engine", "ejs");
 
-app.use(express.static(path.join(path.resolve(), "public")));
+app.use(express.static(path.join(path.resolve(), "../Frontened/public")));
 app.use(express.urlencoded({ extended: true }));
+app.set("views",path.join(path.resolve(),"../Frontened/views"))
 
 
 app.listen(4000, () => {
